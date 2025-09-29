@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sarcastic Birthday Reward</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Dancing+Script:wght@700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="lay.css" />
+
+</head>
+
+<body>
+  <div id="container">
+    <h1>Birthday Reward Machine</h1>
+    <p class="instructions">Pick your birth date from the fancy calendar below.</p>
+
+    <input type="text" id="birthDate" placeholder="Select your birth date" aria-label="Select your birth date" />
+    <br />
+    <button id="rewardBtn" onclick="startReward()">Reward Me Now!</button>
+
+    <div id="loading"></div>
+
+    <div id="rewardBox" role="alert" aria-live="polite" aria-atomic="true">
+      <strong>Here's your super cute gift! 😍</strong>
+      <p>You've been rewarded: <strong>₹60</strong>. Not too shabby!</p>
+      <p class="sarcastic-text" style="margin-top: 20px;">
+        🎉 Congrats! 🎂<br />
+        We barely survived the process, but here’s your surprise.<br />
+        (Happy Birthday — you're pretty awesome today. That’s rare!)
+      </p>
+    </div>
+  </div>
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+<script src="act.js"></script>
+
+</html>

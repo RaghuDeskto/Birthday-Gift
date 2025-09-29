@@ -1,0 +1,161 @@
+/* Base styles (required for desktop & mobile) */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(135deg, #ffafbd 0%, #ffc3a0 100%);
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 20px;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #8b2f56;
+}
+
+#container {
+    max-width: 480px;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 45px 35px;
+    border-radius: 25px;
+    box-shadow: 0 18px 45px rgba(203, 67, 101, 0.3);
+    text-align: center;
+    position: relative;
+    backdrop-filter: blur(12px);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+h1 {
+    font-family: "Dancing Script", cursive;
+    font-size: 3.2rem;
+    margin-bottom: 15px;
+    color: #a22f52;
+    text-shadow: 2px 2px 6px rgba(162, 47, 82, 0.4);
+    animation: pulse 2.5s infinite ease-in-out;
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.07);
+    }
+}
+
+p.instructions {
+    color: #b6557d;
+    font-weight: 600;
+    margin-bottom: 25px;
+    font-size: 1.1rem;
+}
+
+input[type="text"] {
+    width: 85%;
+    max-width: 320px;
+    padding: 14px 18px;
+    border-radius: 18px;
+    border: 2.5px solid #d67a92;
+    background: linear-gradient(135deg, #fff0f2, #ffe5e9);
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: #8b2f56;
+    outline: none;
+    margin-bottom: 20px;
+    transition: all 0.25s ease;
+}
+
+/* Button styling */
+button {
+    background: linear-gradient(135deg, #a22f52, #d45773);
+    border: none;
+    padding: 15px 36px;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: white;
+    border-radius: 28px;
+    cursor: pointer;
+    box-shadow: 0 8px 30px rgba(210, 87, 115, 0.5);
+    transition: all 0.3s ease;
+    margin-bottom: 15px;
+}
+
+/* Loading div styling (for JS fade & spacing) */
+#loading {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #8b2f56;
+    min-height: 30px;
+    /* ensure space even when empty */
+    margin-bottom: 20px;
+    /* distance from button */
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    /* fade effect */
+}
+
+#loading.visible {
+    opacity: 1;
+}
+
+/* Reward box styling */
+#rewardBox {
+    display: none;
+    margin-top: 20px;
+    /* distance from loading */
+    padding: 20px;
+    background: linear-gradient(135deg, #ffe5e9, #fff0f2);
+    border-radius: 20px;
+    font-weight: 600;
+    box-shadow: 0 8px 25px rgba(203, 67, 101, 0.2);
+}
+
+/* Sarcastic text inside reward box */
+#rewardBox .sarcastic-text {
+    margin-top: 15px;
+    font-size: 0.95rem;
+    color: #b6557d;
+}
+
+/* Media queries for mobile */
+@media (max-width: 480px) {
+    input[type="text"] {
+        margin-bottom: 16px;
+    }
+
+    button {
+        margin-bottom: 16px;
+    }
+
+    #rewardBox {
+        margin-top: 20px;
+    }
+
+    #loading {
+        margin-bottom: 16px;
+    }
+}
+
+@media (max-width: 360px) {
+    input[type="text"] {
+        margin-bottom: 12px;
+    }
+
+    button {
+        margin-bottom: 12px;
+    }
+
+    #rewardBox {
+        margin-top: 16px;
+    }
+
+    #loading {
+        margin-bottom: 12px;
+    }
+}
